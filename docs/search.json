@@ -170,7 +170,7 @@
     "href": "GTFS.html#gtfsを作る",
     "title": "General Transit Feed Specific (GTFS)",
     "section": "3. GTFSを作る",
-    "text": "3. GTFSを作る\n\n地域・交通データ研究所: GTFSデータ作成サービス(有償) [link]\n西澤明: 標準的なバス情報フォーマット作成ツール(西沢ツール) [link]\n高野孝一: その筋屋 [link]\n公共交通利用促進ネットワーク：見える化共通フォーマット [link]\n私製: GTFSのマージ [github]\n\n\nGTFSの検証\n\nMobility Data: Canonical GTFS Schedule Validator [link]\n\n作成されたGTFSデータについて，欠損や不明なファイルを検出するツール",
+    "text": "3. GTFSを作る\n\n地域・交通データ研究所: GTFSデータ作成サービス(有償) [link]\n西澤明: 標準的なバス情報フォーマット作成ツール(西沢ツール) [link]\n高野孝一: その筋屋 [link]\n公共交通利用促進ネットワーク：見える化共通フォーマット [link]\n私製: GTFSをマージするコード [github]\n\n\nGTFSの検証\n\nMobility Data: Canonical GTFS Schedule Validator [link]\n\n作成されたGTFSデータについて，欠損や不明なファイルを検出するツール",
     "crumbs": [
       "(戻る)",
       "データ",
@@ -187,6 +187,28 @@
       "(戻る)",
       "データ",
       "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "a_intro.html",
+    "href": "a_intro.html",
+    "title": "はじめに",
+    "section": "",
+    "text": "当サイトに掲載している内容は，すべて個人の見解・意見に基づくものであり，所属するいかなる組織・団体の公式な立場や意見を代表するものではありません．掲載する情報については，可能な限り正確かつ最新の内容となるよう努めていますが，その正確性・完全性・信頼性等を保証するものではありません．ご理解の上，自己責任にてご覧ください．",
+    "crumbs": [
+      "(戻る)",
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "intro_data.html",
+    "href": "intro_data.html",
+    "title": "データ",
+    "section": "",
+    "text": "作成中…",
+    "crumbs": [
+      "(戻る)",
+      "データ"
     ]
   }
 ]

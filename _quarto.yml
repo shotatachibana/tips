@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "tips"
+  title: "Tips"
   google-analytics: "G-ZD4MJZ2MYG"
   navbar:
     tools:
@@ -17,11 +17,10 @@ website:
     search: true
     contents:
       - text: "はじめに"
-        href: introduction.qmd
+        href: a_intro.qmd
       - section: "データ"
-        href: data.qmd
+        href: intro_data.qmd
         contents:
-          - japan.qmd
           - GTFS.qmd
   page-footer: "Copyright 2025, Shota Tachibana"
 
