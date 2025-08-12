@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "tips"
+  google-analytics: "G-ZD4MJZ2MYG"
+  navbar:
+    tools:
+      - icon: github
+        href: https://github.com/shotatachibana
+    left:
+    - text: "(戻る)"
+      href: https://shotatachibana.github.io
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "はじめに"
+        href: introduction.qmd
+      - section: "データ"
+        href: data.qmd
+        contents:
+          - japan.qmd
+          - GTFS.qmd
+  page-footer: "Copyright 2025, Shota Tachibana"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+

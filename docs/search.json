@@ -1,0 +1,192 @@
+[
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "はじめに",
+    "section": "",
+    "text": "当サイトに掲載している内容は，すべて個人の見解・意見に基づくものであり，所属するいかなる組織・団体の公式な立場や意見を代表するものではありません．掲載する情報については，可能な限り正確かつ最新の内容となるよう努めていますが，その正確性・完全性・信頼性等を保証するものではありません．ご理解の上，自己責任にてご覧ください．",
+    "crumbs": [
+      "(戻る)",
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "japan.html",
+    "href": "japan.html",
+    "title": "日本のデータ",
+    "section": "",
+    "text": "作成中…",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "日本のデータ"
+    ]
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "データ",
+    "section": "",
+    "text": "作成中…",
+    "crumbs": [
+      "(戻る)",
+      "データ"
+    ]
+  },
+  {
+    "objectID": "GTFS.html",
+    "href": "GTFS.html",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "",
+    "text": "GTFSの配布サイト，仕様書や検証ツールをまとめる",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#データを知る",
+    "href": "GTFS.html#データを知る",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "1. データを知る",
+    "text": "1. データを知る\n\nGTFS\n\n国土交通省: 静的バス情報フォーマット（GTFS-JP）の仕様書 [link]\nMobility Data [link]\nGoogle Transti [link] ※記載内容はMobility Dataのサイトと同等\n\n\n\nGTFS-RT\n\n動的バス情報フォーマット（GTFSリアルタイム）ガイドライン [link]\n太田恒平: 熊本のバス5社のGTFS Realtimeオープンデータを使う [link]\nGoogle Transit:\n\nガイドライン [link]\nGoogle 乗換案内 の GTFS リアルタイム フィード リファレンスと相違点 [link]\n\nNAVITIME_Tech: GTFSリアルタイムのデータを扱う際に気をつけるべき点 [link]",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#データを取得する",
+    "href": "GTFS.html#データを取得する",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "2. データを取得する",
+    "text": "2. データを取得する\n\nMobility Data: Explore and Access Global Transit Data [link]\n\n全世界のGTFSデータの公開状況がわかる\n\nT.Shimada’s Data Lab.（旭川高専の嶋田先生[researchmap]）: 公共交通オープンデータ一覧 [link]\n公共交通オープンデータセンター [link]\nGTFSデータリポジトリ [link]\n西澤明「研究用GTFSデータの公開」[link]",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#データを作成する",
+    "href": "GTFS.html#データを作成する",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "3. データを作成する",
+    "text": "3. データを作成する\n\n地域・交通データ研究所: GTFSデータ作成サービス（有償） [link]\n西澤明: 標準的なバス情報フォーマット作成ツール（西沢ツール）[link]\n高野孝一: その筋屋 [link]\n公共交通利用促進ネットワーク：見える化共通フォーマット [link]\n私製: GTFSのマージ [github]",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#データを検証する",
+    "href": "GTFS.html#データを検証する",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "4. データを検証する",
+    "text": "4. データを検証する\n\nMobility Data: Canonical GTFS Schedule Validator [link]\n\n作成されたGTFSデータについて，欠損や不明なファイルを検出するツール",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#データを使う",
+    "href": "GTFS.html#データを使う",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "5. データを使う",
+    "text": "5. データを使う\n\nConveyal: r5py [link]\n\nGTFSデータを用いて移動時間マトリクスや到達圏解析を行うpythonのパッケージ\nこのパッケージを利用したヘルシンキの大学の演習 [link]\n\nMobilityData: gtfs-realtime-binding [link]\n\nGTFS-Realtime の情報を取得するツール",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#gtfsを知る",
+    "href": "GTFS.html#gtfsを知る",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "1. GTFSを知る",
+    "text": "1. GTFSを知る\n\nGTFS\n\n国土交通省: 標準的なバス情報フォーマットの技術資料 [link]\nMobility Data [link]\nGoogle Transti [link] ※記載内容はMobility Dataのサイトと同等\n\n\n\nGTFS-RT\n\nGTFS-JP: 動的バス情報フォーマット（GTFSリアルタイム）ガイドライン [link]\n太田恒平: 熊本のバス5社のGTFS Realtimeオープンデータを使う [link]\nGoogle Transit:\n\nガイドライン [link]\nGoogle 乗換案内 の GTFS リアルタイム フィード リファレンスと相違点 [link]\n\nNAVITIME_Tech: GTFSリアルタイムのデータを扱う際に気をつけるべき点 [link]",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#gtfsを取得する",
+    "href": "GTFS.html#gtfsを取得する",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "2. GTFSを取得する",
+    "text": "2. GTFSを取得する\n\nMobility Data: Explore and Access Global Transit Data [link]\n\n全世界のGTFSデータの公開状況がわかる\n\nT.Shimada’s Data Lab.: 公共交通オープンデータ一覧 [link]\n\n旭川高専の嶋田先生[researchmap]\n\n公共交通オープンデータセンター [link]\nGTFSデータリポジトリ [link]\n西澤明「研究用GTFSデータの公開」[link]",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#gtfsを作成する",
+    "href": "GTFS.html#gtfsを作成する",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "3. GTFSを作成する",
+    "text": "3. GTFSを作成する\n\n地域・交通データ研究所: GTFSデータ作成サービス（有償） [link]\n西澤明: 標準的なバス情報フォーマット作成ツール（西沢ツール）[link]\n高野孝一: その筋屋 [link]\n公共交通利用促進ネットワーク：見える化共通フォーマット [link]\n私製: GTFSのマージ [github]\n\n\nGTFSの検証\n\nMobility Data: Canonical GTFS Schedule Validator [link]\n\n作成されたGTFSデータについて，欠損や不明なファイルを検出するツール",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#gtfsを使う",
+    "href": "GTFS.html#gtfsを使う",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "4. GTFSを使う",
+    "text": "4. GTFSを使う\n\nConveyal: r5py [link]\n\nGTFSデータを用いて移動時間マトリクスや到達圏解析を行うpythonのパッケージ(r5rのpython版)\nこのパッケージを利用したヘルシンキの大学の演習 [link]\n\nMobilityData: gtfs-realtime-binding [link]\n\nGTFS-Realtime の情報を取得するツール",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#gtfsを収集する",
+    "href": "GTFS.html#gtfsを収集する",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "2. GTFSを収集する",
+    "text": "2. GTFSを収集する\n\nMobility Data: Explore and Access Global Transit Data [link]\n\n全世界のGTFSデータの公開状況がわかる\n\nT.Shimada’s Data Lab.: 公共交通オープンデータ一覧 [link]\n\n旭川高専の嶋田先生[researchmap]\n\n公共交通オープンデータセンター [link]\nGTFSデータリポジトリ [link]\n西澤明「研究用GTFSデータの公開」[link]",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#gtfsを作る",
+    "href": "GTFS.html#gtfsを作る",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "3. GTFSを作る",
+    "text": "3. GTFSを作る\n\n地域・交通データ研究所: GTFSデータ作成サービス(有償) [link]\n西澤明: 標準的なバス情報フォーマット作成ツール(西沢ツール) [link]\n高野孝一: その筋屋 [link]\n公共交通利用促進ネットワーク：見える化共通フォーマット [link]\n私製: GTFSのマージ [github]\n\n\nGTFSの検証\n\nMobility Data: Canonical GTFS Schedule Validator [link]\n\n作成されたGTFSデータについて，欠損や不明なファイルを検出するツール",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  },
+  {
+    "objectID": "GTFS.html#gtfsを集める",
+    "href": "GTFS.html#gtfsを集める",
+    "title": "General Transit Feed Specific (GTFS)",
+    "section": "2. GTFSを集める",
+    "text": "2. GTFSを集める\n\nMobility Data: Explore and Access Global Transit Data [link]\n\n全世界のGTFSデータの公開状況がわかる\n\nT.Shimada’s Data Lab.: 公共交通オープンデータ一覧 [link]\n\n旭川高専の嶋田先生[researchmap]\n\n公共交通オープンデータセンター [link]\nGTFSデータリポジトリ [link]\n西澤明「研究用GTFSデータの公開」[link]",
+    "crumbs": [
+      "(戻る)",
+      "データ",
+      "General Transit Feed Specific (GTFS)"
+    ]
+  }
+]

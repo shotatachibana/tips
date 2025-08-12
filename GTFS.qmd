@@ -1,0 +1,54 @@
+---
+title: "General Transit Feed Specific (GTFS)"
+---
+GTFSの配布サイト，仕様書や検証ツールをまとめる
+
+## 1. GTFSを知る
+
+### GTFS
+
+1. 国土交通省: 標準的なバス情報フォーマットの技術資料 [[link](https://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000112.html)]
+2. Mobility Data [[link](https://gtfs.org/)]
+3. Google Transti [[link](https://developers.google.com/transit?hl=ja)] ※記載内容はMobility Dataのサイトと同等
+
+### GTFS-RT
+
+1. GTFS-JP: 動的バス情報フォーマット（GTFSリアルタイム）ガイドライン [[link](https://www.gtfs.jp/developpers-guide/gtfs-realtime_guidelines.html)]
+2. 太田恒平: 熊本のバス5社のGTFS Realtimeオープンデータを使う [[link](https://qiita.com/kohei-ota/items/104dac4afec818217921)]
+3. Google Transit: 
+    1. ガイドライン [[link](https://developers.google.com/transit/gtfs-realtime?hl=ja)]
+    2. Google 乗換案内 の GTFS リアルタイム フィード リファレンスと相違点 [[link](https://developers.google.com/transit/gtfs-realtime/reference?hl=ja)]
+4. NAVITIME_Tech: GTFSリアルタイムのデータを扱う際に気をつけるべき点 [[link](https://note.com/navitime_tech/n/nf414304fcf6e)]
+
+## 2. GTFSを集める
+
+1. Mobility Data: Explore and Access Global Transit Data [[link](https://mobilitydatabase.org/)]
+    - 全世界のGTFSデータの公開状況がわかる
+2. T.Shimada's Data Lab.: 公共交通オープンデータ一覧 [[link](https://tshimada291.sakura.ne.jp/transport/gtfs-list.html)]
+    * 旭川高専の嶋田先生[[researchmap](https://researchmap.jp/TShimada)]
+3. 公共交通オープンデータセンター [[link](https://www.odpt.org/overview/)]
+4. GTFSデータリポジトリ [[link](https://gtfs-data.jp/)]
+5. 西澤明「研究用GTFSデータの公開」[[link](https://gtfs-gis.jp/gtfs4research/)]
+
+## 3. GTFSを作る
+
+1. 地域・交通データ研究所: GTFSデータ作成サービス(有償) [[link](https://nszw.jp/gtfs%e3%83%87%e3%83%bc%e3%82%bf%e4%bd%9c%e6%88%90%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9/)]
+2. 西澤明: 標準的なバス情報フォーマット作成ツール(西沢ツール) [[link](https://gtfs-gis.jp/gtfs/)]
+3. 高野孝一: その筋屋 [[link](http://www.sinjidai.com/sujiya/)]
+4. 公共交通利用促進ネットワーク：見える化共通フォーマット [[link](https://www.rosenzu.com/net/mieru/fm/index.html)]
+5. 私製: GTFSをマージするコード [[github](https://github.com/shotatachibana/GTFS_merge.git)]
+        
+
+### GTFSの検証
+
+1. Mobility Data: Canonical GTFS Schedule Validator [[link](https://r5py.readthedocs.io/stable/)]
+    * 作成されたGTFSデータについて，欠損や不明なファイルを検出するツール
+
+## 4. GTFSを使う
+
+1. Conveyal: r5py [[link](https://r5py.readthedocs.io/en/stable/index.html)]
+    * GTFSデータを用いて移動時間マトリクスや到達圏解析を行うpythonのパッケージ(r5rのpython版)
+    * このパッケージを利用したヘルシンキの大学の演習 [[link](https://sustainability-gis.readthedocs.io/en/latest/)]
+
+2. MobilityData: gtfs-realtime-binding [[link](https://github.com/MobilityData/gtfs-realtime-bindings/tree/master)]
+    * GTFS-Realtime の情報を取得するツール
