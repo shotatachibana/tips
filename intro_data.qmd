@@ -1,4 +1,8 @@
 ---
 title: "データ"
+listing:
+  contents:
+    - GTFS.qmd
+  type: table
+  fields: [title, description]
 ---
-作成中...
