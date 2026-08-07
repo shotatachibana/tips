@@ -22,7 +22,8 @@ website:
         href: intro_data.qmd
         contents:
           - GTFS.qmd
-      - text: "PDFをPNGに変換"
+      - section: "ツール"
+        text: "PDFをPNGに変換"
         href: pdf_to_png.qmd
   page-footer: "Copyright 2025, Shota Tachibana"
 
