@@ -1,8 +1,7 @@
 ---
 title: "データ"
 listing:
-  contents:
-    - GTFS.qmd
+  contents: "data/*.qmd"
   type: table
   fields: [title, description]
 ---
