@@ -19,13 +19,11 @@ website:
       - text: "はじめに"
         href: a_intro.qmd
       - section: "データ"
-        href: intro_data.qmd
-        contents:
-          - GTFS.qmd
+        href: data/intro_data.qmd
+        contents: "data/*.qmd"
       - section: "ツール"
-        href: pdf_to_png.qmd
-        contents:
-          - pdf_to_png.qmd
+        href: tools/pdf_to_png.qmd
+        contents: "tools/*.qmd"
   page-footer: "Copyright 2025, Shota Tachibana"
 
 format:
