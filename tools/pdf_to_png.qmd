@@ -1,8 +1,7 @@
 ---
 title: "PDFをPNGに変換する"
+description: "ブラウザ上で完結するPDF→PNG変換ツール．ファイルはサーバーに送信されず，すべて端末内の処理のみで変換される．[pdf.js](https://mozilla.github.io/pdf.js/)を利用．"
 ---
-
-ブラウザ上で完結するPDF→PNG変換ツール．ファイルはサーバーに送信されず，すべて端末内の処理のみで変換される．[pdf.js](https://mozilla.github.io/pdf.js/)を利用．
 
 ```{=html}
 <div class="pdf2png-tool">
