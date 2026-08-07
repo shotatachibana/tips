@@ -22,7 +22,7 @@ website:
         href: intro_data.qmd
         contents: "data/*.qmd"
       - section: "ツール"
-        href: tools/pdf_to_png.qmd
+        href: intro_tools.qmd
         contents: "tools/*.qmd"
   page-footer: "Copyright 2025, Shota Tachibana"
 
