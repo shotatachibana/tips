@@ -19,7 +19,7 @@ website:
       - text: "はじめに"
         href: a_intro.qmd
       - section: "データ"
-        href: data/intro_data.qmd
+        href: intro_data.qmd
         contents: "data/*.qmd"
       - section: "ツール"
         href: tools/pdf_to_png.qmd
