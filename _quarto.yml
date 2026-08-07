@@ -23,6 +23,7 @@ website:
         contents:
           - GTFS.qmd
       - section: "ツール"
+        href: pdf_to_png.qmd
         contents:
           - pdf_to_png.qmd
   page-footer: "Copyright 2025, Shota Tachibana"
