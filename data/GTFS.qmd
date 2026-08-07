@@ -1,8 +1,7 @@
 ---
 title: "General Transit Feed Specific (GTFS)"
+description: "GTFSの配布サイト，仕様書や検証ツールをまとめる"
 ---
-GTFSの配布サイト，仕様書や検証ツールをまとめる
-
 ## 1. GTFSを知る
 
 ### GTFS
