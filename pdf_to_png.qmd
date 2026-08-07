@@ -1,0 +1,161 @@
+---
+title: "PDFをPNGに変換する"
+---
+
+ブラウザ上で完結するPDF→PNG変換ツール．ファイルはサーバーに送信されず，すべて端末内の処理のみで変換される．[pdf.js](https://mozilla.github.io/pdf.js/)を利用．
+
+```{=html}
+<div class="pdf2png-tool">
+  <div id="p2p-drop">
+    <div class="p2p-main">ここにPDFをドロップ、またはクリックして選択</div>
+    <div class="p2p-sub">1つのPDFファイルに対応</div>
+    <input type="file" id="p2p-fileInput" accept="application/pdf">
+  </div>
+
+  <div class="p2p-controls">
+    <label>解像度
+      <select id="p2p-scale">
+        <option value="1">1x</option>
+        <option value="2" selected>2x</option>
+        <option value="3">3x</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="p2p-status"></div>
+  <div id="p2p-pages"></div>
+  <button class="p2p-primary" id="p2p-zipBtn">全ページをZIPでダウンロード</button>
+</div>
+
+<style>
+  .pdf2png-tool{ margin: 1.5em 0; }
+  #p2p-drop{
+    border: 1px dashed #ced4da;
+    border-radius: 6px;
+    padding: 32px 16px;
+    text-align: center;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  #p2p-drop.hover{ border-color: #2761e3; background: #eef3fd; }
+  #p2p-drop .p2p-sub{ font-size: 0.85em; color: #6c757d; margin-top: 4px; }
+  .pdf2png-tool input[type=file]{ display:none; }
+  .p2p-controls{
+    display:flex; align-items:center; gap:8px;
+    margin-top: 14px; font-size: 0.9em; color: #6c757d;
+  }
+  .pdf2png-tool select{
+    border: 1px solid #ced4da; border-radius: 4px; padding: 4px 6px;
+  }
+  #p2p-status{ font-size: 0.85em; color: #6c757d; margin-top: 12px; min-height: 16px; }
+  #p2p-pages{
+    margin-top: 18px; display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  .p2p-page-item{
+    border: 1px solid #dee2e6; border-radius: 6px; overflow:hidden; text-align:center;
+  }
+  .p2p-page-item img{ width:100%; display:block; border-bottom: 1px solid #dee2e6; }
+  .p2p-page-item .p2p-label{ font-size: 0.75em; color: #6c757d; padding: 5px 4px 2px; }
+  .p2p-page-item a{ display:block; font-size: 0.75em; padding: 2px 0 6px; text-decoration:none; }
+  button.p2p-primary{
+    margin-top: 16px; background:#fff; color:#2761e3;
+    border: 1px solid #2761e3; border-radius: 4px; padding: 7px 14px;
+    font-size: 0.85em; cursor:pointer; display:none;
+  }
+  button.p2p-primary:hover{ background:#2761e3; color:#fff; }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function(){
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+  const drop = document.getElementById('p2p-drop');
+  const fileInput = document.getElementById('p2p-fileInput');
+  const status = document.getElementById('p2p-status');
+  const pagesEl = document.getElementById('p2p-pages');
+  const zipBtn = document.getElementById('p2p-zipBtn');
+  const scaleSelect = document.getElementById('p2p-scale');
+
+  let lastBlobs = [];
+
+  drop.addEventListener('click', () => fileInput.click());
+  drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('hover'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('hover'));
+  drop.addEventListener('drop', e => {
+    e.preventDefault();
+    drop.classList.remove('hover');
+    if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+  });
+  fileInput.addEventListener('change', e => {
+    if (e.target.files.length) handleFile(e.target.files[0]);
+  });
+
+  async function handleFile(file){
+    if (file.type !== 'application/pdf'){
+      status.textContent = 'PDFファイルを選択してください。';
+      return;
+    }
+    pagesEl.innerHTML = '';
+    zipBtn.style.display = 'none';
+    lastBlobs = [];
+    status.textContent = '読み込み中...';
+
+    const scale = parseFloat(scaleSelect.value);
+    const arrayBuffer = await file.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    const baseName = file.name.replace(/\.pdf$/i, '');
+
+    for (let i = 1; i <= pdf.numPages; i++){
+      status.textContent = `変換中... (${i}/${pdf.numPages})`;
+      const page = await pdf.getPage(i);
+      const viewport = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      const ctx = canvas.getContext('2d');
+      await page.render({ canvasContext: ctx, viewport }).promise;
+
+      const blob = await new Promise(res => canvas.toBlob(res, 'image/png'));
+      const name = `${baseName}_p${String(i).padStart(2,'0')}.png`;
+      lastBlobs.push({ name, blob });
+
+      const url = URL.createObjectURL(blob);
+      const item = document.createElement('div');
+      item.className = 'p2p-page-item';
+      item.innerHTML = `
+        <img src="${url}" alt="page ${i}">
+        <div class="p2p-label">Page ${i}</div>
+        <a href="${url}" download="${name}">ダウンロード</a>
+      `;
+      pagesEl.appendChild(item);
+    }
+
+    status.textContent = `完了: 全${pdf.numPages}ページを変換しました。`;
+    if (pdf.numPages > 1) zipBtn.style.display = 'inline-block';
+  }
+
+  zipBtn.addEventListener('click', async () => {
+    status.textContent = 'ZIPを作成中...';
+    const zip = new JSZip();
+    lastBlobs.forEach(({name, blob}) => zip.file(name, blob));
+    const content = await zip.generateAsync({ type: 'blob' });
+    const url = URL.createObjectURL(content);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'pdf2png_pages.zip';
+    a.click();
+    status.textContent = 'ZIPをダウンロードしました。';
+  });
+})();
+</script>
+```
+
+::: {.callout-note}
+このページの変換処理はすべてブラウザ内で完結しており，PDFの内容が外部サーバーに送信されることはない．
+:::
